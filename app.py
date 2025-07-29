@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 from datetime import datetime, timedelta
-import cloudpickle as pickle
+
 # --- CONFIG ---
 st.set_page_config(page_title="LunarisAI", layout="centered", page_icon="🌙")
 st.markdown("<h1 style='text-align: center;'>🌙 LunarisAI</h1>", unsafe_allow_html=True)
@@ -14,8 +14,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOAD MODEL ---
-with open("model_pipeline/lunaris_pipeline.pkl", "rb") as f:
-    pipeline = pickle.load(f)
+pipeline = joblib.load("model_pipeline/lunaris_pipeline.pkl")
 
 # --- UNCERTAINTY RANGE HELPER ---
 def get_uncertainty_window(pred_days, *, PCOS, stress_level, cycle_regularity, birth_control, age):
