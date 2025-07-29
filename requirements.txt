@@ -4,6 +4,5 @@ scikit-learn
 matplotlib
 seaborn
 shap
-joblib
+pickle
 streamlit
-cloudpickle
