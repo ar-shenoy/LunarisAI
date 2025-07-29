@@ -14,7 +14,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOAD MODEL ---
-pipeline = joblib.load("model_pipeline\lunaris_pipeline.pkl",compress=3)
+pipeline = joblib.load("lunaris_pipeline.pkl")
 
 # --- UNCERTAINTY RANGE HELPER ---
 def get_uncertainty_window(pred_days, *, PCOS, stress_level, cycle_regularity, birth_control, age):
