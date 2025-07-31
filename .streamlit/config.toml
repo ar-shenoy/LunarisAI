@@ -5,6 +5,8 @@ backgroundColor = "#121212"
 secondaryBackgroundColor = "#2C2C3A"
 textColor = "#F1F1F1"
 font = "sans serif"
+[python]
+version = "3.10"
 [server]
 headless = true
 enableCORS = false
